@@ -1,5 +1,6 @@
 ﻿#include <math.h>
 #include <stdio.h>
+#include "C:/keil/EE319Kware/inc/tm4c123gh6pm.h"
 #define PI 3.142857
 
 //convert to radians
@@ -52,3 +53,9 @@ double disTill100(long double lat1, long double  lon1, long double lat2, long do
    
     return totalDis;
 }
+void led_output(double distance ){ 
+		 if(distance>=100){
+		 GPIO_PORTF_DATA_R|=0x0E;	
+		 }
+		 }
+
