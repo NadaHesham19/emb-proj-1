@@ -29,8 +29,8 @@ int delay()
 {
     int a, b;
 
-    for (a = 1; a <= 32; a++)
-        for (b = 1; b <= 32767; b++)
+    for (a = 1; a <= 30; a++)
+        for (b = 1; b <= 100; b++)
         {
         }
 
