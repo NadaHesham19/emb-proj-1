@@ -1,0 +1,27 @@
+void LCD_INIT()
+   {
+	 delay_ms(20);
+   LCD_comm (0x30); // LCD wake up
+	 delay_ms(5);
+	 LCD_comm (0x30);
+	 delay_us(100);
+	 LCD_comm (0x30);
+	 LCD_comm (0x38); // selecting 8 bit mode in the LCD
+	 LCD_comm (0x06); // incrementing the cursor
+	 LCD_comm (0x01); // clearing the display
+	 LCD_comm (0x0F); // cursor blink
+	 }
+   
+void delay_ms(int n){
+  //milli second delay 
+	int x,y;
+	for (x=0 ; x<n ; x++)
+	for(y=0; y<3180; y++){}
+	}
+  
+void delay_us(int n){
+  //micro second delay
+	int x,y;
+	for (x=0 ; x<n ; x++)
+	for(y=0; y<3; y++){}
+	}
