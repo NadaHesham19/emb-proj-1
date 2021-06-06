@@ -50,7 +50,8 @@ double disTill100(long double lat1, long double  lon1, long double lat2, long do
         totalDis += getDistance(lat1, lon1, lat2, lon2);
         printf("%lf\n", totalDis);
     }
-   
+
+   led_output(totalDis);
     return totalDis;
 }
 void led_output(double distance ){ 
