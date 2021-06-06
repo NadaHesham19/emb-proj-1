@@ -1,0 +1,23 @@
+ int main(){
+		init();
+		LCD_comm (0x01);	
+	  LCD_comm (0x80);
+		delay_ms(300);
+    LCD_dat('D');
+		LCD_dat('I'); 
+		LCD_dat('S'); 
+		LCD_dat('T'); 
+	  LCD_dat('A'); 
+		LCD_dat('N');
+    LCD_dat('C');
+    LCD_dat('E');
+    LCD_dat('-'); 
+    LCD_dat('>');
+ 		 
+		delay_ms(500);
+    double distance = getDistance(30.07803610431271, 31.274169123429644,30.0779182293887, 31.274840339591478);
+		display_distance(distance);
+    delay_ms(500);
+    led_output(distance);
+		 
+}
