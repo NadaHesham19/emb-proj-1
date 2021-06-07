@@ -103,9 +103,9 @@ void SystemInit(){}
      {   int dig;
          int i ;
          for(i=0; i<3; i++){  
-			 	 dig =(int)distance%10;
+	 dig =(int)distance%10;
          dig+=48; 
-         LCD_comm(0x80+(2-i));
+         LCD_comm(0x80+(13-i));
          LCD_dat(dig);
          distance/=10;
       }
